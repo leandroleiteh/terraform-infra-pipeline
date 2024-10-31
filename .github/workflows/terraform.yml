@@ -63,4 +63,4 @@ jobs:
         id: terraform-apply
         run: cd infra &&
           terraform workspace select ${{ inputs.environment }} || terraform workspace new ${{ inputs.environment }} &&
-          teraform apply "${{ inputs.environment }}.plan"
+          terraform apply "${{ inputs.environment }}.plan"
